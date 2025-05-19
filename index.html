@@ -102,12 +102,31 @@
       padding: 20px;
       margin-top: 30px;
     }
-    .timetable-links a {
-      position: absolute;
-      display: block;
-      width: 400px;
-      height: 80px;
-      left: 50px;
+    .time-slot {
+      padding: 20px;
+      border-bottom: 1px solid #ccc;
+      font-size: 16px;
+      background: #FFD580;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 0.5s ease forwards;
+    }
+    .time-slot:nth-child(even) {
+      background: #FFA500;
+    }
+    .time-slot a {
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .time-slot a:hover {
+      color: #E74C3C;
+    }
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -132,18 +151,15 @@
 
   <section>
     <h2>タイムテーブル</h2>
-    <div style="position: relative; display: inline-block;">
-      <img src="festival_timetable_styled.png" alt="タイムテーブル" width="500">
-      <div class="timetable-links">
-        <a href="g-dragon.html" style="top: 62px;"></a>
-        <a href="exile-b-happy.html" style="top: 142px;"></a>
-        <a href="shirogane-noel.html" style="top: 222px;"></a>
-        <a href="fantastics-1.html" style="top: 302px;"></a>
-        <a href="le-sserafim.html" style="top: 382px;"></a>
-        <a href="phantom-theater.html" style="top: 462px;"></a>
-        <a href="fantastics-2.html" style="top: 542px;"></a>
-        <a href="bigbang.html" style="top: 622px;"></a>
-      </div>
+    <div class="timetable" style="width: 80%; max-width: 600px; margin: 0 auto 50px; background: white; color: black; border-radius: 10px; overflow: hidden;">
+      <div class="time-slot" style="animation-delay: 0.2s;"><span class="time">00:30</span><a href="g-dragon.html">G-DRAGON</a></div>
+      <div class="time-slot" style="animation-delay: 0.4s;"><span class="time">00:45</span><a href="exile-b-happy.html">EXILE B HAPPY</a></div>
+      <div class="time-slot" style="animation-delay: 0.6s;"><span class="time">00:55</span><a href="shirogane-noel.html">白銀ノエル</a></div>
+      <div class="time-slot" style="animation-delay: 0.8s;"><span class="time">01:10</span><a href="fantastics-1.html">FANTASTICS（1回目）</a></div>
+      <div class="time-slot" style="animation-delay: 1.0s;"><span class="time">01:25</span><a href="le-sserafim.html">LE SSERAFIM</a></div>
+      <div class="time-slot" style="animation-delay: 1.2s;"><span class="time">01:35</span><a href="phantom-theater.html">ファントムシータ</a></div>
+      <div class="time-slot" style="animation-delay: 1.4s;"><span class="time">01:50</span><a href="fantastics-2.html">FANTASTICS（2回目）</a></div>
+      <div class="time-slot" style="animation-delay: 1.6s;"><span class="time">02:05</span><a href="bigbang.html">BIGBANG</a></div>
     </div>
   </section>
 
