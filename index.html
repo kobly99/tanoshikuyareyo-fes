@@ -12,56 +12,43 @@
       color: white;
       text-align: center;
     }
-
-    header {
-      background-color: #000;
-      padding: 20px;
-    }
-
-    h1 {
-      font-size: 3em;
-      margin: 0;
-    }
-
-    h2 {
+    h1, h2 {
       margin-top: 40px;
-      font-size: 2em;
     }
-
     section {
       padding: 30px;
     }
-
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 1.5s ease-in-out forwards;
+    .lineup-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
     }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+    .lineup-item {
+      text-align: center;
+      width: 180px;
     }
-
-    /* タイムテーブル */
-    table {
-      margin: 0 auto;
-      background: white;
-      color: black;
-      border-collapse: collapse;
-      font-size: 1.1em;
+    .lineup-item img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
     }
-
-    table th, table td {
-      padding: 10px;
-      border: 1px solid #000;
+    .lineup-item:hover img {
+      transform: scale(1.05);
+      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
+      filter: brightness(1.1) saturate(1.2);
     }
-
-    table th {
-      background-color: #ffcc00;
+    .lineup-item p {
+      margin-top: 10px;
+      font-weight: bold;
+      color: white;
+      transition: color 0.3s ease;
     }
-
-    /* チケット購入 */
+    .lineup-item:hover p {
+      color: #ffcc00;
+    }
     .ticket-options {
       display: flex;
       flex-wrap: wrap;
@@ -69,7 +56,6 @@
       gap: 30px;
       margin-top: 20px;
     }
-
     .ticket-card {
       background: #fff;
       color: #000;
@@ -79,12 +65,10 @@
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
-
     .ticket-card h3 {
       margin-bottom: 10px;
       color: #FF6A00;
     }
-
     .ticket-button {
       display: inline-block;
       background-color: #ffcc00;
@@ -97,127 +81,91 @@
       text-decoration: none;
       transition: background-color 0.3s ease;
     }
-
     .ticket-button:hover {
       background-color: #ffaa00;
     }
-
-    /* ラインナップ */
-    .lineup-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 20px;
-    }
-
-    .lineup-item {
-      text-align: center;
-      width: 180px;
-    }
-
-    .lineup-item img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-    }
-
-    .lineup-item:hover img {
-      transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
-      filter: brightness(1.1) saturate(1.2);
-    }
-
-    .lineup-item p {
-      margin-top: 10px;
-      font-weight: bold;
-      color: white;
-      transition: color 0.3s ease;
-    }
-
-    .lineup-item:hover p {
-      color: #ffcc00;
-    }
-
     footer {
       background: #222;
       padding: 20px;
       margin-top: 30px;
     }
+    .timetable-links a {
+      position: absolute;
+      display: block;
+      width: 400px;
+      height: 80px;
+      left: 50px;
+    }
   </style>
 </head>
 <body>
+  <header>
+    <h1>楽しくやれよ FESTIVAL 2025</h1>
+    <p>2025年5月19日（月）@ Kアリーナ横浜</p>
+  </header>
 
-<header>
-  <h1>楽しくやれよ FESTIVAL 2025</h1>
-  <p>2025年5月19日（月）@ Kアリーナ横浜</p>
-</header>
-
-<section class="fade-in">
-  <h2>ラインナップ</h2>
-  <div class="lineup-grid">
-    <div class="lineup-item"><img src="gdragon.jpg" alt="G-DRAGON"><p>G-DRAGON</p></div>
-    <div class="lineup-item"><img src="exile_b_happy.jpg" alt="EXILE B HAPPY"><p>EXILE B HAPPY</p></div>
-    <div class="lineup-item"><img src="shirogane_noel.jpg" alt="白銀ノエル"><p>白銀ノエル</p></div>
-    <div class="lineup-item"><img src="fantastics.jpg" alt="FANTASTICS"><p>FANTASTICS</p></div>
-    <div class="lineup-item"><img src="lesserafim.jpg" alt="LE SSERAFIM"><p>LE SSERAFIM</p></div>
-    <div class="lineup-item"><img src="phantom_theater.jpg" alt="ファントムシータ"><p>ファントムシータ</p></div>
-    <div class="lineup-item"><img src="bigbang.jpg" alt="BIGBANG"><p>BIGBANG</p></div>
-  </div>
-</section>
-
-<section class="fade-in">
-  <h2>タイムテーブル</h2>
-  <table>
-    <tr><th>時間</th><th>出演アーティスト</th></tr>
-    <tr><td>13:00</td><td>G-DRAGON</td></tr>
-    <tr><td>14:00</td><td>EXILE B HAPPY</td></tr>
-    <tr><td>15:00</td><td>白銀ノエル</td></tr>
-    <tr><td>15:45</td><td>FANTASTICS（1回目）</td></tr>
-    <tr><td>16:30</td><td>LE SSERAFIM</td></tr>
-    <tr><td>17:30</td><td>ファントムシータ</td></tr>
-    <tr><td>18:30</td><td>FANTASTICS（2回目）</td></tr>
-    <tr><td>19:30</td><td>BIGBANG</td></tr>
-  </table>
-</section>
-
-<section class="fade-in">
-  <h2>チケット購入</h2>
-  <p>チケット種別を選んで購入ページへお進みください。</p>
-  <div class="ticket-options">
-    <div class="ticket-card">
-      <h3>早割チケット</h3>
-      <p>¥7,500（税込）<br>〜4/30まで</p>
-      <img src="early_qr.png" alt="早割QRコード" width="120"><br>
-      <a href="https://example.com/early" class="ticket-button" target="_blank">購入する</a>
+  <section>
+    <h2>ラインナップ</h2>
+    <div class="lineup-grid">
+      <div class="lineup-item"><img src="gdragon.jpg" alt="G-DRAGON"><p>G-DRAGON</p></div>
+      <div class="lineup-item"><img src="exile_b_happy.jpg" alt="EXILE B HAPPY"><p>EXILE B HAPPY</p></div>
+      <div class="lineup-item"><img src="shirogane_noel.jpg" alt="白銀ノエル"><p>白銀ノエル</p></div>
+      <div class="lineup-item"><img src="fantastics.jpg" alt="FANTASTICS"><p>FANTASTICS</p></div>
+      <div class="lineup-item"><img src="lesserafim.jpg" alt="LE SSERAFIM"><p>LE SSERAFIM</p></div>
+      <div class="lineup-item"><img src="phantom_theater.jpg" alt="ファントムシータ"><p>ファントムシータ</p></div>
+      <div class="lineup-item"><img src="bigbang.jpg" alt="BIGBANG"><p>BIGBANG</p></div>
     </div>
+  </section>
 
-    <div class="ticket-card">
-      <h3>一般チケット</h3>
-      <p>¥9,000（税込）<br>5/1〜5/18</p>
-      <img src="regular_qr.png" alt="一般QRコード" width="120"><br>
-      <a href="https://example.com/regular" class="ticket-button" target="_blank">購入する</a>
+  <section>
+    <h2>タイムテーブル</h2>
+    <div style="position: relative; display: inline-block;">
+      <img src="festival_timetable_styled.png" alt="タイムテーブル" width="500">
+      <div class="timetable-links">
+        <a href="g-dragon.html" style="top: 62px;"></a>
+        <a href="exile-b-happy.html" style="top: 142px;"></a>
+        <a href="shirogane-noel.html" style="top: 222px;"></a>
+        <a href="fantastics-1.html" style="top: 302px;"></a>
+        <a href="le-sserafim.html" style="top: 382px;"></a>
+        <a href="phantom-theater.html" style="top: 462px;"></a>
+        <a href="fantastics-2.html" style="top: 542px;"></a>
+        <a href="bigbang.html" style="top: 622px;"></a>
+      </div>
     </div>
+  </section>
 
-    <div class="ticket-card">
-      <h3>VIPチケット</h3>
-      <p>¥15,000（税込）<br>優先入場＋限定グッズ</p>
-      <img src="vip_qr.png" alt="VIPQRコード" width="120"><br>
-      <a href="https://example.com/vip" class="ticket-button" target="_blank">購入する</a>
+  <section>
+    <h2>チケット購入</h2>
+    <div class="ticket-options">
+      <div class="ticket-card">
+        <h3>早割チケット</h3>
+        <p>¥7,500（税込）<br>〜4/30まで</p>
+        <img src="early_qr.png" alt="早割QRコード" width="120"><br>
+        <a href="https://example.com/early" class="ticket-button" target="_blank">購入する</a>
+      </div>
+      <div class="ticket-card">
+        <h3>一般チケット</h3>
+        <p>¥9,000（税込）<br>5/1〜5/18</p>
+        <img src="regular_qr.png" alt="一般QRコード" width="120"><br>
+        <a href="https://example.com/regular" class="ticket-button" target="_blank">購入する</a>
+      </div>
+      <div class="ticket-card">
+        <h3>VIPチケット</h3>
+        <p>¥15,000（税込）<br>優先入場＋限定グッズ</p>
+        <img src="vip_qr.png" alt="VIPQRコード" width="120"><br>
+        <a href="https://example.com/vip" class="ticket-button" target="_blank">購入する</a>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="fade-in">
-  <h2>アクセス</h2>
-  <p>Kアリーナ横浜（神奈川県横浜市西区みなとみらい）</p>
-  <p><a href="https://www.google.com/maps?q=Kアリーナ横浜" target="_blank" style="color:#ffcc00;">Googleマップで見る</a></p>
-</section>
+  <section>
+    <h2>アクセス</h2>
+    <p>Kアリーナ横浜（神奈川県横浜市西区みなとみらい）</p>
+    <p><a href="https://www.google.com/maps?q=Kアリーナ横浜" target="_blank" style="color:#ffcc00;">Googleマップで見る</a></p>
+  </section>
 
-<footer>
-  <p>&copy; 2025 Tanoshiku Yareyo Festival</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 Tanoshiku Yareyo Festival</p>
+  </footer>
 </body>
 </html>
