@@ -8,26 +8,34 @@
     body {
       font-family: sans-serif;
       margin: 0;
-      background: #FF6A00;
-      color: white;
-      text-align: center;
+      background: #FFF3E0;
+      color: #333;
       animation: fadeInBody 1.2s ease-in;
     }
-    h1, h2 {
-      margin-top: 40px;
-      animation: fadeIn 1.2s ease-in-out;
+    header {
+      background-color: #FF6A00;
+      color: white;
+      padding: 30px 20px 20px;
+      position: relative;
+    }
+    header img {
+      position: absolute;
+      left: 20px;
+      top: 20px;
+      width: 60px;
+      height: auto;
+    }
+    h1 {
+      margin: 0;
+      font-size: 28px;
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 16px;
     }
     section {
       padding: 30px;
       animation: fadeInUp 1s ease forwards;
-    }
-    @keyframes fadeInBody {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
     }
     .lineup-grid {
       display: flex;
@@ -41,6 +49,10 @@
       width: 180px;
       animation: fadeInUp 0.8s ease forwards;
     }
+    .lineup-item a {
+      text-decoration: none;
+      color: inherit;
+    }
     .lineup-item img {
       width: 100%;
       border-radius: 10px;
@@ -49,21 +61,43 @@
     }
     .lineup-item:hover img {
       transform: scale(1.05);
-      box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
       filter: brightness(1.1) saturate(1.2);
     }
     .lineup-item p {
       margin-top: 10px;
       font-weight: bold;
-      color: white;
+      color: #000;
       transition: color 0.3s ease;
     }
     .lineup-item:hover p {
-      color: #ffcc00;
+      color: #FF6A00;
     }
-    .lineup-item a {
-      text-decoration: none;
-      color: white;
+    .timetable {
+      width: 90%;
+      max-width: 600px;
+      margin: 30px auto;
+      text-align: left;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      padding: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .time-row {
+      display: flex;
+      justify-content: flex-start;
+      padding: 10px 0;
+      border-bottom: 1px solid #ccc;
+    }
+    .time {
+      width: 80px;
+      font-weight: bold;
+      color: #555;
+    }
+    .artist {
+      font-weight: bold;
+      color: #222;
     }
     .ticket-options {
       display: flex;
@@ -105,37 +139,21 @@
       background: #222;
       padding: 20px;
       margin-top: 30px;
+      color: white;
     }
-    .time-slot {
-      padding: 20px;
-      border-bottom: 1px solid #ccc;
-      font-size: 16px;
-      background: #FFD580;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: slideUp 0.5s ease forwards;
+    @keyframes fadeInBody {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-    .time-slot:nth-child(even) {
-      background: #FFA500;
-    }
-    .time-slot a {
-      color: black;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .time-slot a:hover {
-      color: #E74C3C;
-    }
-    @keyframes slideUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <header>
+    <img src="f35d3b7c-02cf-4784-a5a0-0dbc5a111c84.png" alt="マスコット">
     <h1>楽しくやれよ FESTIVAL 2025</h1>
     <p>2025年5月19日（月）@ Kアリーナ横浜</p>
   </header>
@@ -143,28 +161,28 @@
   <section>
     <h2>ラインナップ</h2>
     <div class="lineup-grid">
-      <div class="lineup-item"><a href="#gdragon"><img src="gdragon.jpg" alt="G-DRAGON"><p>G-DRAGON</p></a></div>
-      <div class="lineup-item"><a href="#exile"><img src="exile_b_happy.jpg" alt="EXILE B HAPPY"><p>EXILE B HAPPY</p></a></div>
-      <div class="lineup-item"><a href="#noel"><img src="shirogane_noel.jpg" alt="白銀ノエル"><p>白銀ノエル</p></a></div>
-      <div class="lineup-item"><a href="#fantastics1"><img src="fantastics.jpg" alt="FANTASTICS"><p>FANTASTICS</p></a></div>
-      <div class="lineup-item"><a href="#lesserafim"><img src="lesserafim.jpg" alt="LE SSERAFIM"><p>LE SSERAFIM</p></a></div>
-      <div class="lineup-item"><a href="#phantom"><img src="phantom_theater.jpg" alt="ファントムシータ"><p>ファントムシータ</p></a></div>
-      <div class="lineup-item"><a href="#fantastics2"><img src="fantastics.jpg" alt="FANTASTICS"><p>FANTASTICS</p></a></div>
-      <div class="lineup-item"><a href="#bigbang"><img src="bigbang.jpg" alt="BIGBANG"><p>BIGBANG</p></a></div>
+      <a href="g-dragon.html" class="lineup-item"><img src="gdragon.jpg" alt="G-DRAGON"><p>G-DRAGON</p></a>
+      <a href="exile-b-happy.html" class="lineup-item"><img src="exile_b_happy.jpg" alt="EXILE B HAPPY"><p>EXILE B HAPPY</p></a>
+      <a href="shirogane-noel.html" class="lineup-item"><img src="shirogane_noel.jpg" alt="白銀ノエル"><p>白銀ノエル</p></a>
+      <a href="fantastics-1.html" class="lineup-item"><img src="fantastics.jpg" alt="FANTASTICS"><p>FANTASTICS（1回目）</p></a>
+      <a href="le-sserafim.html" class="lineup-item"><img src="lesserafim.jpg" alt="LE SSERAFIM"><p>LE SSERAFIM</p></a>
+      <a href="phantom-theater.html" class="lineup-item"><img src="phantom_theater.jpg" alt="ファントムシータ"><p>ファントムシータ</p></a>
+      <a href="fantastics-2.html" class="lineup-item"><img src="fantastics.jpg" alt="FANTASTICS"><p>FANTASTICS（2回目）</p></a>
+      <a href="bigbang.html" class="lineup-item"><img src="bigbang.jpg" alt="BIGBANG"><p>BIGBANG</p></a>
     </div>
   </section>
 
   <section>
-    <h2 id="timetable">タイムテーブル</h2>
-    <div class="timetable" style="width: 80%; max-width: 600px; margin: 0 auto 50px; background: white; color: black; border-radius: 10px; overflow: hidden;">
-      <div class="time-slot" style="animation-delay: 0.2s;"><span class="time">00:30</span> <a href="g-dragon.html" id="gdragon">G-DRAGON</a></div>
-      <div class="time-slot" style="animation-delay: 0.4s;"><span class="time">00:45</span> <a href="exile-b-happy.html" id="exile">EXILE B HAPPY</a></div>
-      <div class="time-slot" style="animation-delay: 0.6s;"><span class="time">00:55</span> <a href="shirogane-noel.html" id="noel">白銀ノエル</a></div>
-      <div class="time-slot" style="animation-delay: 0.8s;"><span class="time">01:10</span> <a href="fantastics-1.html" id="fantastics1">FANTASTICS（1回目）</a></div>
-      <div class="time-slot" style="animation-delay: 1.0s;"><span class="time">01:25</span> <a href="le-sserafim.html" id="lesserafim">LE SSERAFIM</a></div>
-      <div class="time-slot" style="animation-delay: 1.2s;"><span class="time">01:35</span> <a href="phantom-theater.html" id="phantom">ファントムシータ</a></div>
-      <div class="time-slot" style="animation-delay: 1.4s;"><span class="time">01:50</span> <a href="fantastics-2.html" id="fantastics2">FANTASTICS（2回目）</a></div>
-      <div class="time-slot" style="animation-delay: 1.6s;"><span class="time">02:05</span> <a href="bigbang.html" id="bigbang">BIGBANG</a></div>
+    <h2>タイムテーブル</h2>
+    <div class="timetable">
+      <div class="time-row"><div class="time">13:00</div><div class="artist">G-DRAGON</div></div>
+      <div class="time-row"><div class="time">14:00</div><div class="artist">EXILE B HAPPY</div></div>
+      <div class="time-row"><div class="time">15:00</div><div class="artist">白銀ノエル</div></div>
+      <div class="time-row"><div class="time">15:45</div><div class="artist">FANTASTICS（1回目）</div></div>
+      <div class="time-row"><div class="time">16:30</div><div class="artist">LE SSERAFIM</div></div>
+      <div class="time-row"><div class="time">17:30</div><div class="artist">ファントムシータ</div></div>
+      <div class="time-row"><div class="time">18:30</div><div class="artist">FANTASTICS（2回目）</div></div>
+      <div class="time-row"><div class="time">19:30</div><div class="artist">BIGBANG</div></div>
     </div>
   </section>
 
