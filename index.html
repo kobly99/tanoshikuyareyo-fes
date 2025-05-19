@@ -61,6 +61,10 @@
     .lineup-item:hover p {
       color: #ffcc00;
     }
+    .lineup-item a {
+      text-decoration: none;
+      color: white;
+    }
     .ticket-options {
       display: flex;
       flex-wrap: wrap;
@@ -139,27 +143,28 @@
   <section>
     <h2>ラインナップ</h2>
     <div class="lineup-grid">
-      <div class="lineup-item"><img src="gdragon.jpg" alt="G-DRAGON"><p>G-DRAGON</p></div>
-      <div class="lineup-item"><img src="exile_b_happy.jpg" alt="EXILE B HAPPY"><p>EXILE B HAPPY</p></div>
-      <div class="lineup-item"><img src="shirogane_noel.jpg" alt="白銀ノエル"><p>白銀ノエル</p></div>
-      <div class="lineup-item"><img src="fantastics.jpg" alt="FANTASTICS"><p>FANTASTICS</p></div>
-      <div class="lineup-item"><img src="lesserafim.jpg" alt="LE SSERAFIM"><p>LE SSERAFIM</p></div>
-      <div class="lineup-item"><img src="phantom_theater.jpg" alt="ファントムシータ"><p>ファントムシータ</p></div>
-      <div class="lineup-item"><img src="bigbang.jpg" alt="BIGBANG"><p>BIGBANG</p></div>
+      <div class="lineup-item"><a href="#gdragon"><img src="gdragon.jpg" alt="G-DRAGON"><p>G-DRAGON</p></a></div>
+      <div class="lineup-item"><a href="#exile"><img src="exile_b_happy.jpg" alt="EXILE B HAPPY"><p>EXILE B HAPPY</p></a></div>
+      <div class="lineup-item"><a href="#noel"><img src="shirogane_noel.jpg" alt="白銀ノエル"><p>白銀ノエル</p></a></div>
+      <div class="lineup-item"><a href="#fantastics1"><img src="fantastics.jpg" alt="FANTASTICS"><p>FANTASTICS</p></a></div>
+      <div class="lineup-item"><a href="#lesserafim"><img src="lesserafim.jpg" alt="LE SSERAFIM"><p>LE SSERAFIM</p></a></div>
+      <div class="lineup-item"><a href="#phantom"><img src="phantom_theater.jpg" alt="ファントムシータ"><p>ファントムシータ</p></a></div>
+      <div class="lineup-item"><a href="#fantastics2"><img src="fantastics.jpg" alt="FANTASTICS"><p>FANTASTICS</p></a></div>
+      <div class="lineup-item"><a href="#bigbang"><img src="bigbang.jpg" alt="BIGBANG"><p>BIGBANG</p></a></div>
     </div>
   </section>
 
   <section>
-    <h2>タイムテーブル</h2>
+    <h2 id="timetable">タイムテーブル</h2>
     <div class="timetable" style="width: 80%; max-width: 600px; margin: 0 auto 50px; background: white; color: black; border-radius: 10px; overflow: hidden;">
-      <div class="time-slot" style="animation-delay: 0.2s;"><span class="time">00:30</span><a href="g-dragon.html">G-DRAGON</a></div>
-      <div class="time-slot" style="animation-delay: 0.4s;"><span class="time">00:45</span><a href="exile-b-happy.html">EXILE B HAPPY</a></div>
-      <div class="time-slot" style="animation-delay: 0.6s;"><span class="time">00:55</span><a href="shirogane-noel.html">白銀ノエル</a></div>
-      <div class="time-slot" style="animation-delay: 0.8s;"><span class="time">01:10</span><a href="fantastics-1.html">FANTASTICS（1回目）</a></div>
-      <div class="time-slot" style="animation-delay: 1.0s;"><span class="time">01:25</span><a href="le-sserafim.html">LE SSERAFIM</a></div>
-      <div class="time-slot" style="animation-delay: 1.2s;"><span class="time">01:35</span><a href="phantom-theater.html">ファントムシータ</a></div>
-      <div class="time-slot" style="animation-delay: 1.4s;"><span class="time">01:50</span><a href="fantastics-2.html">FANTASTICS（2回目）</a></div>
-      <div class="time-slot" style="animation-delay: 1.6s;"><span class="time">02:05</span><a href="bigbang.html">BIGBANG</a></div>
+      <div class="time-slot" style="animation-delay: 0.2s;"><span class="time">00:30</span> <a href="g-dragon.html" id="gdragon">G-DRAGON</a></div>
+      <div class="time-slot" style="animation-delay: 0.4s;"><span class="time">00:45</span> <a href="exile-b-happy.html" id="exile">EXILE B HAPPY</a></div>
+      <div class="time-slot" style="animation-delay: 0.6s;"><span class="time">00:55</span> <a href="shirogane-noel.html" id="noel">白銀ノエル</a></div>
+      <div class="time-slot" style="animation-delay: 0.8s;"><span class="time">01:10</span> <a href="fantastics-1.html" id="fantastics1">FANTASTICS（1回目）</a></div>
+      <div class="time-slot" style="animation-delay: 1.0s;"><span class="time">01:25</span> <a href="le-sserafim.html" id="lesserafim">LE SSERAFIM</a></div>
+      <div class="time-slot" style="animation-delay: 1.2s;"><span class="time">01:35</span> <a href="phantom-theater.html" id="phantom">ファントムシータ</a></div>
+      <div class="time-slot" style="animation-delay: 1.4s;"><span class="time">01:50</span> <a href="fantastics-2.html" id="fantastics2">FANTASTICS（2回目）</a></div>
+      <div class="time-slot" style="animation-delay: 1.6s;"><span class="time">02:05</span> <a href="bigbang.html" id="bigbang">BIGBANG</a></div>
     </div>
   </section>
 
